@@ -1,0 +1,559 @@
+// @keyframes anim1{
+//   0% {top: 13.15vh;}
+//   100%{top:-52.6vh;}
+// }
+@keyframes anim2{
+  0% {top: 12.7vh;}
+  50% {top: 0}
+  100%{top:12.7vh;}
+}
+@keyframes anim3{
+  0% {top: 0}
+  50% {top: 12.7vh}
+  100%{top:0;}
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-size: .16rem;
+  box-sizing: border-box;
+  background: url('../images/bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+header{
+  width: 100%;
+  height: 6.69vh;
+  margin-bottom: .3rem;
+  position: relative;
+  .logo{
+    width: 1.68rem;
+    height: 2.59vh;
+    position: absolute;
+    top: 3.24vh;
+    left: .36rem;
+  }
+  .area{
+    position: absolute;
+    top: 3.8vh;
+    left: 2.84rem;
+    font: .2rem SJyunhei;
+    font-weight:400;
+    color:rgb(255,231,231);
+    line-height:.29rem;
+    .weather{
+      width: .36rem;
+      height: .36rem;
+      margin: 0 .22rem  0 .47rem;
+      vertical-align: bottom;
+    }
+    span{
+      margin-right: .35rem;
+    }
+  }
+  #disappare{
+    position: fixed;
+    z-index: 99;
+    top:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    width:5rem;
+    height: 15vh;
+    line-height: 20vh;
+    font-size: .5rem;
+    font-family: "lisu";
+    color:'#cccc';
+    text-align: center;
+    background-color:rgba(0,151,174,1);
+  }
+  .top{
+    height: 100%;
+    width: 14.94rem;
+    background: url('../images/top.png') no-repeat ;
+    background-size: 100% 100%;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 0.4rem;
+    font-family: "lisu";
+    color: #fff;
+    letter-spacing: .03rem;
+    line-height:  6.69vh;
+    text-align: center;
+    margin: auto;
+  }
+  #now{
+    color:rgb(255,231,231);
+    font: .2rem SJyunhei;
+    font-weight:400;
+    color:rgb(255,231,231);
+    position: absolute;
+    line-height:.34rem;
+    top: 3.8vh;
+    right: 2.73rem;
+  }
+  #time{
+    font: .3rem SJyunhei-Regular;
+    font-weight:400;
+    color:rgb(255,231,231);
+    line-height:.34rem;
+    position: absolute;
+    top: 3.2vh;
+    right: .51rem;
+  }
+}
+.main{
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: .31rem;
+  height: max-content;
+  display: flex;
+  flex-wrap:nowrap;
+}
+.rolling{
+  animation: anim2 5s linear infinite;
+}
+.detail-li{
+  width: 100%;
+  height: 27.4vh;
+  background: url('../images/detail-li.png') no-repeat;
+  background-size: 100% 100%;
+}
+.left-top-title{
+  text-align: center;
+  font: 0.2rem Microsoft YaHei;
+  font-weight: 400;
+  color: #5fe4ff;
+  line-height: 4.18vh;
+}
+.top-title{
+  width: 100%;
+  text-align: center;
+  font: 0.2rem Microsoft YaHei;
+  font-weight: 400;
+  color: #5fe4ff;
+  line-height: 4.18vh;
+  position: absolute;
+  z-index: 99;
+}
+.left-detail{
+ 
+  width: 5.1rem;
+  height: 87.78vh;
+  #left-top{
+    margin-bottom: 2.78vh;
+    box-sizing: border-box;
+  ::-webkit-scrollbar {
+      width: .1rem;
+      height: .02rem;
+      border-radius: .1rem;
+      // background-color: #333766;
+      position: relative;
+      left: 1rem;
+  }
+  ::-webkit-scrollbar-track{
+      // background-color: #333766;
+      border-radius: .4rem;
+  }
+  ::-webkit-scrollbar-thumb{
+      width: .06rem;
+      margin: 0 auto;
+      background:#5261ad;
+      border-radius:.1rem;
+  }
+  ::-webkit-scrollbar-corner{
+      background: #333766;
+      position: relative;
+  }
+    .station-detail{
+      box-sizing: border-box;
+      width: 99%;
+      height: calc(100% -  4.18vh);
+      padding-right: 0.1rem;
+      overflow: auto;
+    
+    .left-top-li{
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+        // width: 100%;
+        width: max-content;
+        height: 3.75vh;
+        align-items: center;
+        float: left;
+        &:nth-child(eve){
+          margin-right: .15rem;
+        }
+        .city-name{
+          width: 1.35rem;
+          // width: 0.6rem;
+          color: #FFFFFF;
+          padding-right: .01rem;
+          font-size:.16rem;
+          font-family:Microsoft YaHei;
+          font-weight:400;
+          display: block;
+          text-align: right;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        } 
+        .bar-number{
+          width: 2.2rem;
+          // width: 1.15rem;
+          height: 2.6vh;
+          border: 1px solid #FF7777;
+          background-color: rgba(67,67,67,0.2);
+          .bar-width{
+            height: 1.8vh;
+            width: 0 ;
+            background-color: #FF7777;
+            position: relative;
+            top: 50%;
+            margin-top: -0.9vh;
+          }
+        }
+        .txt-number{
+          width: .8rem;
+          // width:.5rem;
+          height:2.6vh;
+          border:1px solid #FF7777;
+          background-color: rgba(67,67,67,0.2);
+          color: #FFFFFF;
+          text-align: center;
+          font-size: .12rem;
+          margin-left: .03rem;
+          line-height: 2.6vh;
+          overflow: hidden;
+        }
+       
+      };
+    }
+  }
+  #left-midle-position{
+    margin-bottom: 2.78vh;
+    position: relative;
+    #left-middle{
+      width: 100%;
+      height: 100%;
+    }
+    .left-middle-bottom{
+      width: 100%;
+      text-align: center;
+      font: 0.2rem Microsoft YaHei;
+      font-weight: 400;
+      color: #5fe4ff;
+      line-height: 4.18vh;
+      position: absolute;
+      z-index: 99;
+      bottom: 0;
+      // .bottom-contain{
+      //   width: max-content;
+      //   position: relative;
+      //   margin: 0 auto;
+      //   .early-span{
+      //     cursor: pointer;
+      //   }
+      //   .early-color{
+      //     color: #00D5FF;
+      //   }
+      //   span{
+      //     line-height: .16rem;
+      //   }
+      //   img{
+      //     margin-top: -3px;
+      //     line-height: .16rem;
+      //     vertical-align: middle;
+      //     width: .16rem;
+      //     height: .16rem;
+      //     padding-right: .1rem;
+      //   }
+      // }
+      .eraly-contain{
+        margin-right: .72rem;
+      }
+    }
+  }
+  #left-bottom{
+    .table-head{
+      border-bottom: 2px solid #2F7DCC;
+      width: 93%;
+      height: 2vh;
+      margin: 0 auto;
+      color: #6CE8FF;
+      padding-bottom: 0.5vh;
+      margin-bottom: 0.5vh;
+      table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+        font-size: .16rem;
+      }
+      table tbody tr td{
+        font-weight:bold; 
+        &:nth-child(1){
+         width: 1.7rem;
+        }
+      }
+    }
+    .table-contain{
+      margin: 0 auto;
+      width: 93%;
+      overflow-y: hidden;
+      height: calc(100% - 7.48vh);
+      .rowup{
+        -webkit-animation:  20s rowup linear infinite normal;
+        animation:  20s rowup linear infinite normal;
+        position: relative;
+        }
+        .table_height{
+        font-family:Microsoft YaHei;
+        color: #6CE8FF;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: .16rem;
+        tr{
+          height: 3.22vh;
+          line-height: 3.22vh;
+          display: flex;
+          flex-wrap: nowrap;::slotted
+          .img-0{
+            color:'red'
+          }
+          td{
+            &:nth-child(1){
+              width: 1.7rem;
+              text-align: initial;
+              display: block;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            &:nth-child(2){
+              width: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.right-detail{
+  width: 5.1rem;
+  height: 87.78vh;
+  #right-top{
+    margin-bottom: 2.78vh;
+    position: relative;
+    .number{
+      margin-left: .29rem;
+      width: 1.22rem;
+      height: 14.6vh;
+      background-image: url('../images/number.png');
+      background-size: 100% 100%;
+      padding-top: 4.74vh;
+      box-sizing: border-box;
+      position: relative;
+      top: 50%;
+      margin-top: -11.12vh;
+      .number-gif{
+        position: absolute;
+        width: 1.22rem;
+      }
+      .number-gif-1{
+        animation: anim2 5s linear infinite;
+      }
+      .number-gif-2{
+        animation: anim3 5s linear infinite;
+      }
+      .number-top{
+        margin-left: .32rem;
+        font-size:.3rem;
+        font-family:SJyunhei;
+        font-weight:400;
+        color:rgba(0,255,0,1);
+        .number-top-2{
+          color: #C3FFE9;
+        }
+      }
+      .number-bottom{
+        font-size:.16rem;
+        font-family:Microsoft YaHei;
+        font-weight:400;
+        color:rgba(0,230,255,1);
+        text-align: center;
+        margin-top: 4.13vh;
+      }
+    }
+    .rowup{
+      -webkit-animation:  50s rowup linear infinite normal;
+      animation:  50s rowup linear infinite normal;
+      position: relative;
+      }
+    .contain-ul{
+      width: max-content;
+      height: 18vh;
+      width: 100%;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      margin-top: -1vh;
+      .right-top-detail{
+        width: max-content;
+        margin-left: 1.6rem;
+        .right-top-li{
+          height: 3.5vh;
+          line-height: 3.5vh;
+          display: flex;
+          flex-wrap: nowrap;
+          .right-cityName{
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 1.1rem;
+            text-align: center;
+            margin-right: 0.2rem;
+            font-family:Microsoft YaHei;
+            font-weight:bold;
+            color: #6CE9FF;
+            margin-right: 0.1rem;
+          }
+          .insert{
+            display: inline-block;
+            width: 1.1rem;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(108,233,255,1);
+            margin-right: 0.1rem;
+          }
+          .not-line{
+            display: inline-block;
+            width: 1rem;
+            color:#DA7272
+          }
+        }
+      }
+    }
+    
+  }
+  #right-middle{
+    margin-bottom: 2.78vh;
+    position: relative;
+    #right-middle-echarts{
+      width: 100%;
+      height: 100%;
+    }
+    .liNumber{
+      position: absolute;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      height: max-content;
+      top: 29%;
+      right: 5%;
+      bottom: 0;
+      margin: auto;
+      .list{
+        width: 0.05rem;
+        height: 1.3vh;
+        background-color: rgba(255,255,255,0.4);
+        margin-bottom: 0.13rem;
+        border-radius: '0.02rem';
+      }
+    }
+  }
+  #right-bottom{
+    position: relative;
+    #right-bottom-echarts{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+  .between{
+    box-sizing: border-box;
+    width: 8.09rem;
+    height: 87.78vh;
+    background: url('../images/frame.png') no-repeat;
+    background-size: 100% 100% ;
+    margin-left: .23rem;
+    margin-right: .25rem;
+    padding-top: 2.5vh;
+    position: relative;
+    .title-top{
+      position: absolute;
+      left: 1.5rem;
+      height: 8.5vh;
+      width: 100%;
+      z-index: 99;
+      .title{
+        width: 2.39rem;
+        height: 8.5vh;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        background: url('../images/small-box.png') no-repeat;
+        background-size: 100% 100%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        &:nth-child( n + 2){
+          margin-left: .3rem;
+        }
+        p{
+          text-align: center;
+        }
+        .country{
+          text-align: center;
+          font: .2rem Microsoft YaHei;
+          font-weight:400;
+          color:rgb(255,255,255);
+          margin-right: .1rem;
+        }
+          .title-number{
+            font-size:.25rem;
+            font-family: SANS-SERIF;
+            font-weight:400;
+            color:#00D5FF;
+          }
+            .point-number{
+              font-size: .18rem;
+              color:#BEC5CF 
+            }
+            .sum-numbne{
+              font-size: .05rem;
+              font-weight: 200;
+              color: #8DC6FF;
+            }
+          
+      }
+    }
+    #map{
+      width: 100%;
+      height: 61.38vh;
+      display: block !important; //加了这一个最后折线图的最后一个tooltip 不显示
+    }
+    #back-map{
+      position: absolute;
+      width: .93rem;
+      height: 8.5vh;
+      left: 5.2rem;
+      background: url('../images/back.png') no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+    #polling{
+      width: 100%;
+      height: 22.9vh;
+      position: relative;
+      #map-bottom{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }

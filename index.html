@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文物安全AI管理平台</title>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" type="text/css" href="./style/index.css"/>
+  <script type="text/javascript" src="./js/rem.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="top">文物安全AI管理平台</h1>
+    <p id="time"></p>
+    <p id="now"></p>
+    <img class="logo" src="./images/logo.png" >
+    <p class="area">南昌市<img class="weather" src="./images/weather.png" ><span>多云</span>28℃</p>
+    <div id="disappare" style="display:none;">
+      <h2>此景点暂未安装设备</h2>
+    </div>
+  </header>
+ <div class="main">
+    <div class="left-detail">
+      <div class=" detail-li" id="left-top">
+        <div class="left-top-title">值班人员到岗</div>
+        <ul class="station-detail">
+        
+        </ul>
+      </div>
+      <div class=" detail-li" id="left-midle-position">
+        <div class="top-title">告警分布</div>
+        <div id="left-middle"></div>
+        <div class="left-middle-bottom">
+          <!-- <p class="bottom-contain"> -->
+            <!-- <span class="eraly-contain early-span early-color" ><span style="vertical-align: middle;" ><img src="./images/early-active.png" class="active-1"><img src="./images/early-not.png" class="not-1" style="display: none;"></span><span>设备告警</span></span>
+            <span class="early-span early-span-2"><span style="vertical-align: middle;" ><img src="./images/early-not.png" class="not-2"><img src="./images/early-active.png"  class="active-2" style="display: none;"></span><span>设备故障</span></span> -->
+          <!-- </p> -->
+        </div>
+      </div>
+      <div class="detail-li" id="left-bottom">
+        <div class="left-top-title">当天告警信息</div>
+          <div class="table-head">
+            <table>
+              <tr>
+                <td>告警点</td><td>告警类型</td><td>告警时间</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="table-contain">
+            <table class="table_height">
+            </table>
+          </div>
+      </div>
+    </div>
+    <div class="between">
+      <ul class="title-top">
+        <li class="title"><p><span class="country">国家级文保点</span> </p><p><span class="title-number title-number-1">8</span><span class="point-number point-number-1">/160处</span></br></p></li>
+        <li class="title"><p><span class="country">省级文保点</span> </p><p><span class="title-number title-number-2">2</span><span class="point-number point-number-2">/949个</span></br></p></li>
+        <div id="back-map"></div>
+      </ul>
+      
+      <div id="map"></div>
+
+
+      <div id="polling">
+        <div class="top-title">前日巡检统计</div>
+        <div id="map-bottom"></div>
+      </div>
+    </div>
+    <div class="right-detail">
+      <div class="detail-li" id="right-top">
+        <div class="left-top-title">系统接入情况</div>
+        <div class="number">
+          <img src="./images/number-1.png" class="number-gif number-gif-1">
+          <span class="number-top"></span>
+          <p class="number-bottom">上线/系统接入</p>
+          <img src="./images/number-2.png" class="number-gif number-gif-2">
+        </div>
+        <div class="contain-ul">
+          <ul class="right-top-detail">
+           
+          </ul>
+        </div>
+      </div>
+      <div class=" detail-li" id="right-middle">
+        <div class="top-title">设备数量概览</div>
+        <ul class="liNumber">
+        </ul>
+        <div id="right-middle-echarts"></div>
+      </div>
+      <div class=" detail-li" id="right-bottom">
+        <div class="top-title">告警处置率</div>
+        <div id="right-bottom-echarts"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./js/echarts.min.js" ></script>
+<script type="text/javascript" src="./js/time.js"> </script>
+<script src="./node_modules/requirejs/require.js" data-main="./js/mainindex"></script>
+
+
+</html>
